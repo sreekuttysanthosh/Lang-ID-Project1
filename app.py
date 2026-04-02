@@ -185,12 +185,14 @@ tab_upload, tab_record = st.tabs(["📁 Upload Audio", "🎤 Record Audio"])
 with tab_upload:
     uploaded = st.file_uploader("Upload Audio (WAV/MP3/FLAC)", type=["wav","mp3","flac"])
     if uploaded:
-        audio_bytes = uploaded.read()
+        # Use getvalue() instead of read() so we don't accidentally drain the Stream object pointer on a UI rerun
+        audio_bytes = uploaded.getvalue()
 
 with tab_record:
     st.info("Record a 3-10 second clip of you speaking.")
     audio_record = mic_recorder(start_prompt="🔴 Start Recording", stop_prompt="⏹️ Stop Recording", format="wav", key='recorder')
-    if audio_record:
+    if audio_record and len(audio_record.get('bytes', b'')) > 0:
+        # Prioritize recording if currently captured
         audio_bytes = audio_record['bytes']
 
 if audio_bytes:
