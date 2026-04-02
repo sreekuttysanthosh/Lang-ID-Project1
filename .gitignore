@@ -1,0 +1,23 @@
+# Ignore environment files
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Ignore raw data (Huge files)
+data/raw/
+
+# Ignore heavy processed arrays that are not needed for deployment inference
+data/processed/*.npy
+data/processed/*.csv
+
+# Keep the deployment dependencies
+!data/processed/*.pkl
+!data/processed/*.json
+
+# Exclude user's hidden test files
+*.wav
+*.mp3
+*.flac
+*.webm
