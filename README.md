@@ -1,4 +1,4 @@
-# 🗣️ Language Identification from Short Audio Clips Using MFCC and Classical ML
+#  Language Identification from Short Audio Clips Using MFCC and Classical ML
 
 > **Project #39 — Predictive Analytics (AY 2025-26)**
 
@@ -63,7 +63,7 @@ All **10 stages** of the Data Science Project Life Cycle are implemented end-to-
 
 ---
 
-## 🎤 Features Extracted
+##  Features Extracted
 
 A total of **90 handcrafted acoustic features** are extracted from each audio clip:
 
@@ -79,7 +79,7 @@ After feature selection (variance thresholding + mutual information), the most d
 
 ---
 
-## ✅ Results
+##  Results
 
 ### Model Comparison Summary
 
@@ -89,7 +89,7 @@ After feature selection (variance thresholding + mutual information), the most d
 | Random Forest | 0.8979 ± 0.0140 | 0.901 | 0.9011 | 0.9868 | 0.05 |
 | Logistic Regression | 0.8562 ± 0.0197 | 0.860 | 0.8599 | 0.9764 | ~0.00 |
 
-> **🏆 Best model: SVM (RBF)** — achieves a **Macro F1 of 0.92** on held-out test data,
+> ** Best model: SVM (RBF)** — achieves a **Macro F1 of 0.92** on held-out test data,
 > far exceeding the target threshold of **≥ 0.78**, with a Macro AUC of **0.99**.
 
 ### Per-Language Performance (Best Model — SVM RBF)
@@ -119,7 +119,7 @@ Upload a short audio clip (WAV format, 3–10 seconds) and get real-time languag
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 ```bash
 # 1. Clone the repository
@@ -178,7 +178,7 @@ Lang-ID-Project1/
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **[OpenSLR](https://openslr.org/)** for open-source speech datasets (SLR63, SLR65, SLR79, SLR103)
 - **[LibriSpeech](https://www.openslr.org/12/)** for the English speech corpus
